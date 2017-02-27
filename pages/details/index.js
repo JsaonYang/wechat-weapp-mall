@@ -22,7 +22,7 @@ Page({
             },
             success: function(res) {
                 //console.log(res.data.data);
-                that.data.shopppingDetails = res.data.data;
+                var shopppingDetails = res.data.data;
 
                 var goodsPicsInfo = [];
                 var goodsPicsObj = {};
@@ -35,7 +35,8 @@ Page({
                     });
                 }
                 that.setData({
-                    goodsPicsInfo: goodsPicsInfo
+                    goodsPicsInfo: goodsPicsInfo,
+                    shopppingDetails:shopppingDetails
                 })
             }
         })
